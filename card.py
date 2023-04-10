@@ -4,6 +4,14 @@ class Card:
     self.suit = suit
     self.rank = rank
 
+  def cardValue(self):
+    if self.rank == 'J' or self.rank == 'Q' or self.rank == 'K':
+      return 10
+    elif self.rank == 'A':
+      return (1, 11)
+    else:
+      return int(self.rank)
+
   def __str__(self):
     return str(self.suit) + " of " + str(self.rank)
 
